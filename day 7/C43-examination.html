@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Placement Examination</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        /* Header Section */
+        header {
+            background: #0056b3;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            padding: 5px 10px;
+            border: 2px solid white;
+            border-radius: 5px;
+        }
+        nav a:hover {
+            background-color: white;
+            color: #0056b3;
+        }
+
+        /* Main Section */
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #0056b3;
+        }
+
+        /* Forms */
+        form {
+            margin-bottom: 20px;
+        }
+        form label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        form input, form select, form textarea, form button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form button {
+            background: #0056b3;
+            color: white;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+        }
+        form button:hover {
+            background: #004a99;
+        }
+
+        /* Results Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table th, table td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+        table th {
+            background: #0056b3;
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Online Placement Examination</h1>
+        <nav>
+            <a href="#admin">Admin Panel</a>
+            <a href="#candidate">Candidate Dashboard</a>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+        <!-- Admin Section -->
+        <section id="admin">
+            <h2 class="section-title">Admin Panel</h2>
+            <form>
+                <label for="admin-login">Admin Login</label>
+                <input type="text" id="admin-login" placeholder="Enter your admin username">
+                <input type="password" id="admin-password" placeholder="Enter your password">
+                <button type="submit">Login</button>
+            </form>
+            <form>
+                <label for="schedule-exam">Schedule Exam</label>
+                <input type="text" id="schedule-exam" placeholder="Enter Exam Name">
+                <input type="datetime-local" id="exam-time" placeholder="Exam Date and Time">
+                <button type="submit">Schedule</button>
+            </form>
+            <form>
+                <label for="load-questions">Load Questions</label>
+                <textarea id="load-questions" rows="5" placeholder="Enter questions in the format: Question, Option1, Option2, Option3, Option4, Correct Answer"></textarea>
+                <button type="submit">Upload Questions</button>
+            </form>
+        </section>
+
+        <!-- Candidate Section -->
+        <section id="candidate">
+            <h2 class="section-title">Candidate Dashboard</h2>
+            <form>
+                <label for="candidate-login">Candidate Login</label>
+                <input type="text" id="candidate-login" placeholder="Enter your username">
+                <input type="password" id="candidate-password" placeholder="Enter your password">
+                <button type="submit">Login</button>
+            </form>
+            <h3>Available Exams</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Exam Name</th>
+                        <th>Scheduled Time</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Placement Exam 2024</td>
+                        <td>2024-12-15 10:00 AM</td>
+                        <td><button>Start Exam</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Results</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Exam Name</th>
+                        <th>Score</th>
+                        <th>Rank</th>
+                        <th>Feedback</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Placement Exam 2024</td>
+                        <td>85%</td>
+                        <td>1</td>
+                        <td><button>Download Scorecard</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Online Placement Examination System. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

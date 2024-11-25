@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RentRide - Vehicle Rental Platform</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            line-height: 1.6;
+        }
+
+        /* Header Section */
+        .header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+        }
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        .header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .header .nav a {
+            color: #fff;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+        .header .nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('hero-bg.jpg') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 5rem 1rem;
+        }
+        .hero h2 {
+            font-size: 2.5rem;
+        }
+        .hero .btn {
+            display: inline-block;
+            background: #f90;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            margin-top: 1rem;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .hero .btn:hover {
+            background: #e80;
+        }
+
+        /* Search Section */
+        .search-section {
+            background: #f4f4f4;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        .search-section h2 {
+            margin-bottom: 1rem;
+        }
+        .search-form input,
+        .search-form select {
+            margin: 0.5rem;
+            padding: 0.5rem;
+            width: 200px;
+        }
+        .search-form .btn {
+            padding: 0.5rem 1rem;
+            background: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .search-form .btn:hover {
+            background: #555;
+        }
+
+        /* Vehicles Section */
+        .vehicles-section {
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        .vehicle-grid {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .vehicle-card {
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 1rem;
+            text-align: center;
+            width: 300px;
+        }
+        .vehicle-card img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        .vehicle-card .btn {
+            margin-top: 1rem;
+            background: #f90;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border: none;
+            cursor: pointer;
+        }
+        .vehicle-card .btn:hover {
+            background: #e80;
+        }
+
+        /* Footer Section */
+        .footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">RentRide</h1>
+            <nav class="nav">
+                <a href="#search">Search</a>
+                <a href="#vehicles">Vehicles</a>
+                <a href="#dashboard">Dashboard</a>
+                <a href="#support">Support</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Find Your Perfect Ride</h2>
+        <p>Browse our fleet of vehicles and book with ease.</p>
+        <a href="#search" class="btn">Get Started</a>
+    </section>
+
+    <!-- Search Section -->
+    <section id="search" class="search-section">
+        <h2>Search for a Vehicle</h2>
+        <form class="search-form">
+            <input type="text" placeholder="Location" required>
+            <select>
+                <option value="">Select Vehicle Type</option>
+                <option value="car">Car</option>
+                <option value="truck">Truck</option>
+                <option value="suv">SUV</option>
+            </select>
+            <input type="date" placeholder="Rental Date" required>
+            <button type="submit" class="btn">Search</button>
+        </form>
+    </section>
+
+    <!-- Featured Vehicles -->
+    <section id="vehicles" class="vehicles-section">
+        <h2>Featured Vehicles</h2>
+        <div class="vehicle-grid">
+            <div class="vehicle-card">
+                <img src="car1.jpg" alt="Car 1">
+                <h3>Car 1</h3>
+                <p>$50/day</p>
+                <button class="btn">Book Now</button>
+            </div>
+            <div class="vehicle-card">
+                <img src="car2.jpg" alt="Car 2">
+                <h3>Car 2</h3>
+                <p>$60/day</p>
+                <button class="btn">Book Now</button>
+            </div>
+            <div class="vehicle-card">
+                <img src="car3.jpg" alt="Car 3">
+                <h3>Car 3</h3>
+                <p>$70/day</p>
+                <button class="btn">Book Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2024 RentRide. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

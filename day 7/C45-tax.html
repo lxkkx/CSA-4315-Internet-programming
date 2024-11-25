@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Tax Calculation</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        /* Header Section */
+        header {
+            background: #007bff;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            padding: 8px 12px;
+            border: 2px solid white;
+            border-radius: 5px;
+        }
+        nav a:hover {
+            background-color: white;
+            color: #007bff;
+        }
+
+        /* Main Section */
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #007bff;
+        }
+
+        /* Forms */
+        form {
+            margin-bottom: 20px;
+        }
+        form label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        form input, form select, form textarea, form button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form button {
+            background: #007bff;
+            color: white;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+        }
+        form button:hover {
+            background: #0056b3;
+        }
+
+        /* Results Section */
+        .results {
+            margin-top: 20px;
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .results p {
+            margin: 0 0 10px;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Income Tax Calculation System</h1>
+        <nav>
+            <a href="#admin">Admin Panel</a>
+            <a href="#employee">Employee Dashboard</a>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+        <!-- Admin Section -->
+        <section id="admin">
+            <h2 class="section-title">Admin Panel</h2>
+            <form>
+                <label for="admin-login">Admin Login</label>
+                <input type="text" id="admin-login" placeholder="Enter Admin Username">
+                <input type="password" id="admin-password" placeholder="Enter Password">
+                <button type="submit">Login</button>
+            </form>
+            <form>
+                <label for="update-fields">Update Fields for Tax Calculation</label>
+                <textarea id="update-fields" rows="5" placeholder="Enter norms or values for calculation"></textarea>
+                <button type="submit">Update</button>
+            </form>
+        </section>
+
+        <!-- Employee Section -->
+        <section id="employee">
+            <h2 class="section-title">Employee Dashboard</h2>
+            <form>
+                <label for="employee-login">Employee Login</label>
+                <input type="text" id="employee-login" placeholder="Enter your Username or Email">
+                <button type="submit">Login with Gmail</button>
+                <button type="submit">Login with Social Media</button>
+            </form>
+            <form>
+                <label for="annual-salary">Annual Salary</label>
+                <input type="number" id="annual-salary" placeholder="Enter your annual salary">
+                <label for="bonuses">Bonuses</label>
+                <input type="number" id="bonuses" placeholder="Enter bonuses or additional income">
+                <label for="hra">House Rent Allowance</label>
+                <input type="number" id="hra" placeholder="Enter HRA">
+                <label for="pension">Pension Contributions</label>
+                <input type="number" id="pension" placeholder="Enter Pension Contributions">
+                <label for="health-insurance">Health Insurance</label>
+                <input type="number" id="health-insurance" placeholder="Enter Health Insurance Premiums">
+                <button type="submit">Calculate Tax</button>
+            </form>
+            <div class="results">
+                <h3>Tax Calculation Results</h3>
+                <p><strong>Net Taxable Income:</strong> ₹ 0.00</p>
+                <p><strong>Total Tax Liability:</strong> ₹ 0.00</p>
+                <p><strong>Net Income After Tax:</strong> ₹ 0.00</p>
+                <button>Download Summary Report</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Income Tax Calculation System. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
